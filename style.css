@@ -1,0 +1,109 @@
+/* Reset default spacing */
+body, html {
+    margin: 20px;
+    padding: 0;
+  }
+  
+  /* Main wrapper */
+  .main {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f6f3;
+    min-height: 100vh;
+    border-radius: 20px;
+    padding: 10px;
+    
+  }
+  .oswald {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .fredericka-the-great-regular {
+    font-family: "Fredericka the Great", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-around;  /* spread items left–right */
+    align-items: center;             /* vertically center */
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #fff;          /* give it a distinct background */
+    border-bottom: 3px solid #ccc;   /* optional: subtle divider */
+    border-radius: 12px;
+    flex-wrap: wrap;                 /* makes it responsive */
+    gap: .5rem;                       /* space between items */
+    box-sizing: border-box;
+  }
+  
+.Y0AcX {
+    color: rgb(var(--color-eel));
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+  /* Logo */
+  .logo-img {
+    height: 100px;      /* smaller so it fits in nav */
+    
+  }
+  
+
+  body > div > section > div >  a
+  {
+
+    color: black;
+    text-decoration: none;
+
+
+
+  }
+
+  body > div > section > div > a:hover{
+    text-decoration: underline; /* underline only on hover */
+  }
+
+
+  /* Text links in navbar */
+  .navbar div {
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .grid-container
+  {
+    display: grid;
+    grid-template-rows: 500px 500px;
+    grid-template-columns: 500px 500px;
+    gap: 150px;
+   
+
+  }
+
+ .grid-item
+  {
+    border-radius: 20px;
+    background-color: rgba(181, 176, 176, 0.392);
+
+  }
+
+  
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;    /* stack items on smaller screens */
+      align-items: center;
+    }
+  }
+  
