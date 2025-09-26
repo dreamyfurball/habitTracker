@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "cal-heatmap": "^4.2.4",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}
