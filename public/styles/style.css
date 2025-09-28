@@ -1,0 +1,249 @@
+/* Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  color: #333;
+}
+
+/* Habit input */
+#habit-name {
+  visibility: hidden;   /* ✅ works with your JS */
+  margin: 0.5rem 0 1.5rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05) inset;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Main wrapper */
+.main {
+  display: flex;
+  flex-direction: column;
+  background: #ffffffcc;
+  min-height: 100vh;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Fonts */
+.oswald {
+  font-family: "Oswald", sans-serif;
+}
+
+.fredericka-the-great-regular {
+  font-family: "Fredericka the Great", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #8EC5FC, #E0C3FC);
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.navbar div, 
+.navbar a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #222;
+}
+
+/* Logo */
+.logo-img {
+  height: 70px;
+  border-radius: 50%;
+}
+
+/* Habit input + button */
+#add-a-habit {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+#add-a-habit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+#habit-name {
+  display: block;
+  margin: 0.5rem 0 1.5rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05) inset;
+  transition: border 0.3s ease;
+}
+
+#habit-name:focus {
+  border: 1px solid #43e97b;
+  outline: none;
+}
+
+/* Habit list */
+#habit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#habit-list li {
+  background: #f9f9f9;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+#habit-list li:hover {
+  transform: translateX(4px);
+  background: #f1f1f1;
+}
+
+/* Optional icons inside list items */
+#habit-list li::before {
+  content: "✔️";
+  margin-right: 0.75rem;
+}
+
+/* Grid layout section (dashboard style) */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Timer display */
+#timer-display {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 15px 0;
+  text-align: center;
+  color: #333;
+}
+
+/* Timer buttons */
+#start-timer, #pause-timer, #reset-timer {
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#start-timer { background: #4caf50; color: white; }
+#pause-timer { background: #ff9800; color: white; }
+#reset-timer { background: #f44336; color: white; }
+
+
+/* Style the habit input box inside grid-item */
+.grid-item input[type="text"] {
+  width: 90%;               /* stay inside card */
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #8be28a; /* soft green border */
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;    /* prevent overflow */
+  display: block;
+}
+
+
+.grid-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Finish button */
+#finish {
+  display: inline-block;
+  visibility: hidden; /* keep it in layout */
+  background: linear-gradient(135deg, #ff512f, #dd2476); /* strong gradient */
+  border: none;
+  border-radius: 14px;
+  padding: 0.85rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+  background 0.4s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  margin-top: 1.5rem;
+}
+
+/* Hover state */
+#finish:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(221, 36, 118, 0.4);
+  background: linear-gradient(135deg, #dd2476, #ff512f); /* flip gradient */
+}
+
+/* Active (click down) state */
+#finish:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* Optional pulse animation to draw attention */
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(221,36,118,0.6); }
+  70%  { box-shadow: 0 0 0 15px rgba(221,36,118,0); }
+  100% { box-shadow: 0 0 0 0 rgba(221,36,118,0); }
+}
+
+#finish.attention {
+  animation: pulse 2s infinite;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habit Tracker</title>
+  <link href="/styles/style.css" rel="stylesheet"/>   <!-- ✅ fixed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+  <!-- ✅ CalHeatmap CSS belongs in head -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cal-heatmap/dist/cal-heatmap.css" />
+</head>
+<body>
+  <div class="main">
+    <!-- Navbar -->
+    <section>
+      <div class="navbar">
+        <div id="logo-greeting">
+          <img src="/styles/habittracker.svg" class="logo-img" alt="Habit Tracker Logo">
+        </div>
+        <a class="oswald" href="#">progress</a>
+        <a class="oswald" href="#">donate</a>
+        <a class="oswald" href="#">settings</a>
+      </div>
+    </section>
+
+    <!-- Hero + Heatmap -->
+    <div class="hero">
+      <h1 class="Y0AcX fredericka-the-great-regular">Welcome to Habit.io</h1>
+      <div id="cal-heatmap"></div> 
+    </div>
+
+    <!-- Grid Container -->
+    <div class="grid-container">
+      
+      <!-- Habit Tracker -->
+      <div class="grid-item">
+        <h2>Add a Habit</h2>  
+        <button id="add-a-habit">create a new habit</button>
+        <input 
+          type="text" 
+          id="habit-name" 
+          name="habit-name" 
+          required 
+          minlength="4" 
+          maxlength="25"
+          placeholder="Enter your habit..."
+        />
+        <button id="finish">finished</button>
+      
+        <div>
+          <ul id="habit-list"></ul>
+        </div>
+      </div>
+
+      <!-- Pomodoro Timer -->
+      <div class="grid-item">
+        <h2>Pomodoro Timer</h2>
+        <label>Study (minutes): 
+          <input type="number" id="study-time" value="25" min="1">
+        </label><br><br>
+
+        <label>Break (minutes): 
+          <input type="number" id="break-time" value="5" min="1">
+        </label><br><br>
+
+        <label>Repetitions: 
+          <input type="number" id="reps" value="4" min="1">
+        </label><br><br>
+    
+        <div id="timer-display">25:00</div>
+    
+        <button id="start-timer">Start</button>
+        <button id="pause-timer">Pause</button>
+        <button id="reset-timer">Reset</button>
+      </div>
+
+    </div> <!-- end grid-container -->
+  </div> <!-- end main -->
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cal-heatmap/dist/cal-heatmap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cal-heatmap/dist/plugins/themes.min.js"></script>
+  <script src="/heatmap.js"></script>
+  <script src="/adding-habit.js"></script>
+  <script src="/timer.js"></script>
+</body>
+</html>
